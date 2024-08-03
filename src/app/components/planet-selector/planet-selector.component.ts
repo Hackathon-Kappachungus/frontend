@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { PlanetsService } from '../../services/planets.service';
@@ -13,4 +13,18 @@ import { RouterLink } from '@angular/router';
 })
 export class PlanetSelectorComponent {
   planetsService = inject(PlanetsService);
+
+  isMenuOpen = false;
+
+  onMenuOpen(): void {
+    this.isMenuOpen = true;
+    document.body.classList.add('blurred');
+    console.log("open");
+  }
+
+  onMenuClose(): void {
+    this.isMenuOpen = false;
+    document.body.classList.remove('blurred');
+    console.log("close");
+  }
 }

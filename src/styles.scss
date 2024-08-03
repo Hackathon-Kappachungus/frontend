@@ -17,8 +17,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   backdrop-filter: blur(10px);
 }
 
+.transparent-menu{
+  --mat-menu-container-color : rgba(0, 0, 0, 0.4  ) !important;
+}
+
 /* Apply default font family */
 body {
   @apply font-outfit;
 }
 
+.blurred {
+  filter: blur(5px);
+  transition: filter 0.3s;
+}

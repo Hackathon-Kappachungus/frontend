@@ -2,10 +2,15 @@
   <mat-icon>menu</mat-icon>
 </button>
 
-<mat-menu #menu="matMenu">
+<mat-menu #menu="matMenu" class = "transparent-menu" (opened)="onMenuOpen()" (closed)="onMenuClose()">
   @for (planet of planetsService.planets(); track planet.guid) {
     <button mat-menu-item [routerLink]="['/planet', planet.guid]" class="group cursor-pointer flex items-center">
-      <span class="text-2xl underline"><img [src]="planet.imageUrl" class=" inline h-4 mr-2">{{ planet.name }}</span>
+      <span class="text-2xl border-b border-b-white border-b-solid flex flex-row gap-1">
+        <div class="w-[20px] grid place-items-center">
+          <img [src]="planet.imageUrl" class="object-contain">
+        </div>
+        {{ planet.name }}
+      </span>
     </button>
   }
 </mat-menu>
