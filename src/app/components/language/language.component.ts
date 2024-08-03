@@ -1,9 +1,10 @@
 import { Component, input } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-language',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './language.component.html',
   styleUrl: './language.component.scss',
 })

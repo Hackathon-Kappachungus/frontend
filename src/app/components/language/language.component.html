@@ -2,9 +2,6 @@
 
 
 
-
-
-
 @for (phrase of phrases; track $index) {
   <audio [src]="phrase.url" #audio></audio>
   <button mat-icon-button (click)="audio.play()">
