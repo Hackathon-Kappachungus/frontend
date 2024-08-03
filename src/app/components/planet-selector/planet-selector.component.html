@@ -1,8 +1,13 @@
-<button mat-icon-button [matMenuTriggerFor]="menu">
+
+@if (isMenuOpen) {
+  <div class="h-screen w-screen backdrop-blur-lg z-50" style="position: fixed; top: 0; left: 0;"></div>
+}
+<button mat-icon-button [matMenuTriggerFor]="menu" (menuOpened)="onMenuOpen()" (menuClosed)="onMenuClose()">
   <mat-icon>menu</mat-icon>
 </button>
 
-<mat-menu #menu="matMenu" class = "transparent-menu" (opened)="onMenuOpen()" (closed)="onMenuClose()">
+
+<mat-menu #menu="matMenu" class="transparent-menu">
   @for (planet of planetsService.planets(); track planet.guid) {
     <button mat-menu-item [routerLink]="['/planet', planet.guid]" class="group cursor-pointer flex items-center">
       <span class="text-2xl border-b border-b-white border-b-solid flex flex-row gap-1">

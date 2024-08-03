@@ -18,13 +18,10 @@ export class PlanetSelectorComponent {
 
   onMenuOpen(): void {
     this.isMenuOpen = true;
-    document.body.classList.add('blurred');
-    console.log("open");
   }
 
   onMenuClose(): void {
     this.isMenuOpen = false;
-    document.body.classList.remove('blurred');
-    console.log("close");
+
   }
 }
