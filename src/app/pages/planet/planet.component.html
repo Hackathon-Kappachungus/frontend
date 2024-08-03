@@ -9,12 +9,11 @@
   }
 
   <div class="flex-1 z-10">
-    <app-weather-widget/>
-
+    <router-outlet/>
   </div>
 
   <div class="flex flex-row justify-end gap-10 uppercase underline w-full z-0">
-    <div>
+    <div [routerLink]="['language']">
       Language
     </div>
     <div>
