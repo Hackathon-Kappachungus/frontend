@@ -23,6 +23,11 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.transparent-menu{
+  --mat-menu-container-color : rgba(0, 0, 0, 0  ) !important;
+  border: none;
+}
+
 /* Apply default font family */
 body {
   @apply font-outfit;
@@ -38,31 +43,31 @@ body {
     transform: translate(0px, 0px);
   }
   10% {
-    transform: translate(5px, -5px);
+    transform: translate(2px, -2px);
   }
   20% {
-    transform: translate(-20px, 20px);
+    transform: translate(-5px, 7px);
   }
   30% {
-    transform: translate(10px, -10px);
+    transform: translate(5px, -5px);
   }
   40% {
-    transform: translate(-5px, 15px);
+    transform: translate(-2px, 7px);
   }
   50% {
-    transform: translate(5px, -15px);
+    transform: translate(2px, -7px);
   }
   60% {
-    transform: translate(-15px, 5px);
+    transform: translate(-7px, 2px);
   }
   70% {
-    transform: translate(15px, -5px);
+    transform: translate(7px, -2px);
   }
   80% {
-    transform: translate(-10px, 10px);
+    transform: translate(-5px, 5px);
   }
   90% {
-    transform: translate(10px, -10px);
+    transform: translate(5px, -5px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -70,5 +75,5 @@ body {
 }
 
 .random-object {
-  @include smooth-random-movement(16s); // Adjust duration for smoother motion
+  @include smooth-random-movement(60s); // Adjust duration for smoother motion
 }

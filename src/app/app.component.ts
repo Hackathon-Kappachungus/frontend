@@ -21,7 +21,7 @@ export class AppComponent {
     const y = event.clientY / window.innerHeight;
 
     if (this.background) {
-      this.background.nativeElement.style.backgroundPosition = `${x * 5}% ${y * 5}%`;
+      this.background.nativeElement.style.backgroundPosition = `${x * 1.25}% ${y * 1.25}%`;
     }
   }
 }
