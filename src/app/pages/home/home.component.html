@@ -1,5 +1,16 @@
-<p>home works!</p>
+<div class="min-h-svh p-10 flex flex-col">
+  <div class="flex flex-row gap-10 uppercase">
+    <div class="mr-auto">
+      Travel guide app
+    </div>
+  </div>
 
-@for (planet of planetsService.planets(); track planet.guid) {
-  <p [routerLink]="['/planet', planet.guid]">{{ planet.name }}</p>
-}
+  <div class="grid grid-cols-3 flex-1 items-center text-center">
+    @for (planet of planetsService.planets(); track planet.guid) {
+      <div [routerLink]="['/planet', planet.guid]" class="group cursor-pointer">
+        <img [src]="planet.imageUrl" class="group-hover:scale-110 transition size-[200px] mx-auto object-contain">
+        <p class="opacity-0 group-hover:opacity-100 transition">{{ planet.name }}</p>
+      </div>
+    }
+  </div>
+</div>
