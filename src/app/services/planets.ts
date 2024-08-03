@@ -10,13 +10,22 @@ export const planets: planet[] = [
     detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269154956846563421/mars-info-img.png?ex=66af0829&is=66adb6a9&hm=ed7e1596d3d3828521f3d759e79af44b0bdd065a09ac9a559211c11dc2a1f0b9&",
     temperature: "24°C",
     current_weather: "Sunny",
+    current_image: "assets/sunny.png",
     big_warning: "SEVERE DUST STORMS",
     small_warning: "Please wear a dust mask",
     weather: [{
-      temperature: 35,
+      temperature: 30,
       image: "assets/cloud.png",
       day: "Mon",
-    }]
+    },{
+      temperature: 20,
+      image: "assets/rain.png",
+      day: "Tue",
+    },{
+      temperature: 15,
+      image: "assets/cloud.png",
+      day: "Wed",
+    },]
 
   },
   {
@@ -28,13 +37,22 @@ export const planets: planet[] = [
     detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269161717464698972/image.png?ex=66af0e75&is=66adbcf5&hm=7fec4ad426820b3779950f65bd4763b95e76fe58008372b0b2cf5cd99c64e999&",
     temperature: "-10°C",
     current_weather: "Stormy",
+    current_image: "assets/storm.png",
     big_warning: "THUNDERSTORMS",
     small_warning: "Please wear waterproof gear",
     weather: [{
       temperature: -40,
-      image: "assets/cloud.png",
+      image: "assets/storm.png",
       day: "Mon",
-    }]
+    },{
+      temperature: -60,
+      image: "assets/rain.png",
+      day: "Tue",
+    },{
+      temperature: -35,
+      image: "assets/cloud.png",
+      day: "Wed",
+    },]
   },
   {
     name: "Saturn",
@@ -44,14 +62,23 @@ export const planets: planet[] = [
     warnings: ['warning1', 'warning2', 'warning3'],
     detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269161554830430248/image.png?ex=66af0e4e&is=66adbcce&hm=d4c36699900fdf5b5248734ceaa4421ba6489f41e7f5f2c655281d9c1d73acd2&",
     temperature: "-100°C",
-    current_weather: "",
+    current_weather: "Cloudy",
+    current_image: "assets/cloud.png",
     big_warning: "Freezing",
     small_warning: "Layer Up",
     weather: [{
       temperature: -40,
       image: "assets/cloud.png",
       day: "Mon",
-    }]
+    },{
+      temperature: -20,
+      image: "assets/cloud.png",
+      day: "Tue",
+    },{
+      temperature: -15,
+      image: "assets/rain.png",
+      day: "Wed",
+    },]
   },
   {
     name: "Uranus",
@@ -62,13 +89,22 @@ export const planets: planet[] = [
     detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269202709735800843/iqi.png?ex=66af34a2&is=66ade322&hm=378a117d18b5008c8eb4f43845f5f3e1ad741e3108d0bb17105dd4c5ed54ff9f&",
     temperature: "-10°C",
     current_weather: "Stormy",
+    current_image: "assets/storm.png",
     big_warning: "THUNDERSTORMS",
     small_warning: "Please wear waterproof gear",
     weather: [{
-      temperature: -40,
+      temperature: 30,
       image: "assets/cloud.png",
       day: "Mon",
-    }]
+    },{
+      temperature: 20,
+      image: "assets/cloud.png",
+      day: "Tue",
+    },{
+      temperature: -15,
+      image: "assets/cloud.png",
+      day: "Wed",
+    },]
   },
   {
     name: "Neptune",
@@ -77,15 +113,24 @@ export const planets: planet[] = [
     description: "Neptune is the eighth and farthest planet from the Sun, known for its striking blue color, strong winds, dynamic storms, and 14 moons, with Triton being the largest.",
     warnings: ['warning1', 'warning2', 'warning3'],
     detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269200539330023497/nept.png?ex=66af329d&is=66ade11d&hm=3f94f2cbba082420220ae2c0a96e299a3955db6ce0733b8129fd18a3772d3bf1&",
-    temperature: "-10°C",
-    current_weather: "Stormy",
+    temperature: "20°C",
+    current_weather: "Sunny",
+    current_image: "assets/sunny.png",
     big_warning: "THUNDERSTORMS",
     small_warning: "Please wear waterproof gear",
     weather: [{
       temperature: -40,
       image: "assets/cloud.png",
       day: "Mon",
-    }]
+    },{
+      temperature: -20,
+      image: "assets/storm.png",
+      day: "Tue",
+    },{
+      temperature: -15,
+      image: "assets/cloud.png",
+      day: "Wed",
+    },]
   },
   {
     name: "Pluto",
@@ -94,14 +139,23 @@ export const planets: planet[] = [
     description: "Pluto is a dwarf planet in the Kuiper Belt, known for its icy surface, eccentric orbit, and five moons, with Charon being the largest.",
     warnings: ['warning1', 'warning2', 'warning3'],
     detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269199431564263495/plutooo-removebg-preview.png?ex=66af3195&is=66ade015&hm=239ae580cd3b3e11da950d9c96193afa2438e800fcca0d64a0b440202dba855a&",
-    temperature: "-10°C",
-    current_weather: "Stormy",
+    temperature: "-70°C",
+    current_weather: "cloudy",
+    current_image: "assets/cloud.png",
     big_warning: "THUNDERSTORMS",
     small_warning: "Please wear waterproof gear",
     weather: [{
       temperature: -40,
-      image: "assets/cloud.png",
+      image: "assets/storm.png",
       day: "Mon",
-    }]
+    },{
+      temperature: -20,
+      image: "assets/rain.png",
+      day: "Tue",
+    },{
+      temperature: -15,
+      image: "assets/cloud.png",
+      day: "Wed",
+    },]
   }
 ]
