@@ -13,4 +13,19 @@
       </div>
     }
   </div>
+
+
 </div>
+
+<div class="fixed bottom-10 right-10" (click)="image.click()">
+  <img src="assets/camera.png" alt="Camera Icon" class="h-[90px] mx-auto">
+  <p>DETECT PLANET</p>
+  <input type="file" #image class="hidden" (change)="onFileSelected($event)"/>
+</div>
+
+@if(isLoading()){
+
+<div class="fixed h-full w-full bg-black top-0 left-0">
+loading....
+</div>
+}
