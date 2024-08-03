@@ -1,1 +1,32 @@
-<p>weather-widget works!</p>
+<div class="weather-widget" *ngIf="weatherData">
+    <div class="top-section">
+        <div class="current-weather">
+            <img src="http://openweathermap.org/img/wn/{{ weatherData.current.weather[0].icon }}@2x.png" alt="Weather icon">
+            <p>{{ weatherData.current.temp }}°C</p>
+        </div>
+        <div class="additional-info">
+            <div class="info-item">
+                <img src="assets/wind.png" alt="Wind icon">
+                <p>{{ weatherData.current.wind_speed }} m/s</p>
+            </div>
+            <div class="info-item">
+                <img src="assets/cloud.png" alt="Cloud icon">
+                <p>{{ weatherData.current.clouds }}%</p>
+            </div>
+            <div class="info-item">
+                <img src="assets/snow.png" alt="Snow icon">
+                <p>{{ weatherData.current.snow ? weatherData.current.snow['1h'] : 'No snow' }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-section">
+        <div class="forecast-item" *ngFor="let day of weatherData.daily; let i = index" [hidden]="i === 0">
+            <p>{{ getDayOfWeek(i) }}</p>
+            <img src="http://openweathermap.org/img/wn/{{ day.weather[0].icon }}@2x.png" alt="Weather icon">
+            <p>{{ day.temp.day }}°C</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="!weatherData">
+    <p>Loading...</p>
+</div>
