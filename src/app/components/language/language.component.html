@@ -1,1 +1,8 @@
 <p>language works!</p>
+
+@for (phrase of phrases; track $index) {
+  <audio [src]="phrase.url" #audio></audio>
+  <button (click)="audio.play()">Play</button>
+
+}
+
