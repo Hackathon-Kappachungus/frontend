@@ -8,18 +8,21 @@
             <mat-panel-title class="text-4xl">{{catagory.name}}</mat-panel-title>
           </mat-expansion-panel-header>
 
-          @for (phrase of catagory.phrases; track phrase.guid) {
-            <div class="cursor-pointer p-2 flex justify-between items-center w-full max-w-1/2 mx-auto bg-gradient-to-r from-black to-[#431810] bg-opacity-80 rounded-lg mb-4" (click)="audio.play()">
-              <div class="flex-grow text-left mx-1">
-                <div class="font-bold">{{ phrase.phrase }}</div>
-                <div class="text-sm text-gray-500">{{ phrase.translation }}</div>
+          <div class="grid grid-cols-2 gap-8">
+            @for (phrase of catagory.phrases; track phrase.guid) {
+              <div class="cursor-pointer p-2 flex justify-between items-center w-full max-w-1/2 mx-auto bg-gradient-to-r from-black to-[#431810] bg-opacity-80 rounded-lg mb-4" (click)="audio.play()">
+                <div class="flex-grow text-left mx-1">
+                  <div class="font-bold">{{ phrase.phrase }}</div>
+                  <div class="text-sm text-gray-500">{{ phrase.translation }}</div>
+                </div>
+                <button mat-icon-button class="mx-1">
+                  <mat-icon>volume_up</mat-icon>
+                </button>
+                <audio [src]="phrase.audioFileUrl" #audio></audio>
               </div>
-              <button mat-icon-button class="mx-1">
-                <mat-icon>volume_up</mat-icon>
-              </button>
-              <audio [src]="phrase.audioFileUrl" #audio></audio>
-            </div>
-          }
+            }
+          </div>
+
         </mat-expansion-panel>
       }
     }
