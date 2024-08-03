@@ -1,31 +1,31 @@
 <div
-     class="weather-widget p-6 w-full bg-transparent rounded-xl space-y-16 relative">
+  class="weather-widget md:p-6 w-full bg-transparent rounded-xl space-y-16 relative">
   <!-- Top Section -->
   <div class="top-section flex flex-col md:flex-row items-center justify-between w-full">
     <div class="flex flex-col md:flex-row items-center text-center">
-      <img alt="Weather icon" class="w-20 h-20 md:w-24 md:h-24 mx-auto" [src]="planet()?.current_image">
+      <img [src]="planet()?.current_image" alt="Weather icon" class="w-20 h-20 md:w-24 md:h-24 mx-auto">
       <div class="flex flex-col md:ml-4">
-        <p class="text-4xl md:text-5xl font-bold">{{planet()?.temperature}}</p>
-        <p class="text-xl md:text-2xl">{{planet()?.current_weather}}</p>
+        <p class="text-4xl md:text-5xl font-bold">{{ planet()?.temperature }}</p>
+        <p class="text-xl md:text-2xl">{{ planet()?.current_weather }}</p>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row items-center mt-4 gap-3">
+
+    <div class="flex flex-row items-center mt-4 gap-3">
       <img alt="Dust storm icon" class="w-20 h-20 md:w-26 md:h-26" src="assets/duststorm.png">
-      <img alt="Warning icon" class="w-20 h-20 md:w-26 md:h-26" src="assets/warning.png">
+      <img alt="Warning icon" class="hidden md:block md:size-26" src="assets/warning.png">
       <div class="flex flex-col text-center">
-        <p class="text-red-600 text-2xl md:text-2xl font-bold">{{planet()?.big_warning}}</p>
-        <p class="text-yellow-600 text-sm md:text-xl">{{planet()?.small_warning}}</p>
+        <p class="text-red-600 text-2xl md:text-2xl font-bold">{{ planet()?.big_warning }}</p>
+        <p class="text-yellow-600 text-sm md:text-xl">{{ planet()?.small_warning }}</p>
       </div>
     </div>
   </div>
 
-  <!-- Bottom Section -->
-  <div class="bottom-section grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-center ml-[40%]">
-    @for (item of planet()?.weather; track $index){
-      <div class="day-item bg-gray-900 bg-opacity-90 p-4 rounded-lg shadow-md">
-        <p class="text-xl md:text-2xl">{{item.temperature}}</p>
-        <img alt="icon" class="w-20 h-20 md:w-20 md:h-20 mx-auto" [src]="item.image">
-        <p class="text-sm md:text-lg">{{item.day}}</p>
+  <div class="grid grid-cols-3 md:flex flex-row gap-4 md:gap-6 text-center justify-end">
+    @for (item of planet()?.weather; track $index) {
+      <div class="day-item bg-gray-900 bg-opacity-90 py-4 md:px-8 rounded-lg shadow-md">
+        <p class="text-xl md:text-2xl px-8 md:px-0">{{ item.temperature }}</p>
+        <img alt="icon" class="size-20 md:size-20 mx-auto object-cover !overflow-visible" [src]="item.image">
+        <p class="text-sm md:text-lg px-8 md:px-0 ">{{ item.day }}</p>
       </div>
     }
   </div>
