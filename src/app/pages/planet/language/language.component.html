@@ -1,9 +1,9 @@
 
 <div style="max-width: 80vw; margin: 0 auto;">
-  <mat-accordion class = "translucent-panel">
+  <mat-accordion class = "">
     @for (catagory of catagories(); track $index) {
       @if (panelOpened() ==  $index|| panelOpened() == undefined) {
-        <mat-expansion-panel class="translucent-panel !mb-8 uppercase p-10 !bg-opacity-30 !backdrop-blur-md" (opened)="panelOpened.set(0)" (closed)="panelOpened.set(undefined)">
+        <mat-expansion-panel class="translucent-panel !mb-8 uppercase p-10 !bg-opacity-30 !backdrop-blur-md" (opened)="panelOpened.set($index)" (closed)="panelOpened.set(undefined)">
           <mat-expansion-panel-header>
             <mat-panel-title class="text-4xl">{{catagory.name}}</mat-panel-title>
           </mat-expansion-panel-header>

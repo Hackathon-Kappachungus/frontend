@@ -17,9 +17,9 @@ export const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: WeatherWidgetComponent
-    },
+      },
       {
-      path: '/language',
+      path: 'language',
       component: LanguageComponent,
       }
     ]

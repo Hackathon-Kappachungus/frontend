@@ -11,10 +11,14 @@ import { PlanetsService } from '../../../services/planets.service';
 @Component({
   selector: 'app-language',
   standalone: true,
-  imports: [MatIconModule, MatExpansionModule, MatIconModule, MatInputModule],
+  imports: [
+    MatIconModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatInputModule
+  ],
   templateUrl: './language.component.html',
   styleUrl: './language.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LanguageComponent {
   planetGuid = input.required<string>();

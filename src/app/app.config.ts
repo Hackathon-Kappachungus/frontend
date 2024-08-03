@@ -1,5 +1,5 @@
 import {ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
-import {provideRouter, withComponentInputBinding, withViewTransitions} from '@angular/router';
+import {provideRouter, withComponentInputBinding, withRouterConfig, withViewTransitions} from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -7,7 +7,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
+    provideRouter(routes, withComponentInputBinding(), withViewTransitions(), withRouterConfig({
+      paramsInheritanceStrategy: 'always'
+    })),
     provideClientHydration(),
     provideAnimationsAsync()
   ]
