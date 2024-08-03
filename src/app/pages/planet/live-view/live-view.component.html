@@ -1,2 +1,4 @@
-<ngx-view360 [options]="options" canvasClass="w-full h-full"
-             class="view360-container w-full h-full rounded-full"/>
+@if (options) {
+  <ngx-view360 [options]="options" canvasClass="w-full h-full"
+               class="view360-container w-full h-full rounded-full"/>
+}

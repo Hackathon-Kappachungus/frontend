@@ -7,7 +7,7 @@ export const planets: planet[] = [
     imageUrl: "https://media.discordapp.net/attachments/563283988265959433/1269124473790136392/mars-homepage.png?ex=66aeebc5&is=66ad9a45&hm=38442deb3ee4b9e2548436d5cc0d9a7f94e7ed1808bf701ab62dd2cbda2bdd91&=&format=webp&quality=lossless&width=1224&height=816",
     description: "Mars, the fourth planet from the Sun, is known as the \"Red Planet\" due to its reddish appearance and is a key focus of study for its potential to harbor past or present life.",
     warnings: ['warning1', 'warning2', 'warning3'],
-    detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269154956846563421/mars-info-img.png?ex=66af0829&is=66adb6a9&hm=ed7e1596d3d3828521f3d759e79af44b0bdd065a09ac9a559211c11dc2a1f0b9&",
+    detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269262777281675264/mm-removebg-preview.png?ex=66af6c93&is=66ae1b13&hm=533dfd1c76175061d6135f46bd05e3393eda5f95b30c06cbad877593bf89282d&",
     temperature: "24°C",
     current_weather: "Sunny",
     current_image: "assets/sunny.png",
@@ -17,15 +17,16 @@ export const planets: planet[] = [
       temperature: 30,
       image: "assets/cloud.png",
       day: "Mon",
-    },{
+    }, {
       temperature: 20,
       image: "assets/rain.png",
       day: "Tue",
-    },{
+    }, {
       temperature: 15,
       image: "assets/cloud.png",
       day: "Wed",
-    },]
+    }],
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269239331105800222/Perseverance_Panorama_8k-2.jpg?ex=66af56bd&is=66ae053d&hm=b73508954f47319bbbb2dabc1f6346bb4b14cdc9a8578bef45d44819a6dbd0be&'
 
   },
   {
@@ -44,15 +45,16 @@ export const planets: planet[] = [
       temperature: -40,
       image: "assets/storm.png",
       day: "Mon",
-    },{
+    }, {
       temperature: -60,
       image: "assets/rain.png",
       day: "Tue",
-    },{
+    }, {
       temperature: -35,
       image: "assets/cloud.png",
       day: "Wed",
-    },]
+    }],
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269258951053017108/panoramic-shot-famous-monument-valley-usa.jpg?ex=66af6903&is=66ae1783&hm=34984832c98864a7834039a71aa655f0d27333966d8bcff57c501c2fe0b82a18&'
   },
   {
     name: "Saturn",
@@ -60,7 +62,7 @@ export const planets: planet[] = [
     imageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269126180758491146/sat-removebg-preview.png?ex=66aeed5c&is=66ad9bdc&hm=45c81bf3634ee844aac7019cb13b38a677385c126af874ec7da6844501b560a4&",
     description: "Saturn is the sixth planet from the Sun, famous for its spectacular rings, and is a gas giant primarily composed of hydrogen and helium with over 80 moons, including Titan, its largest moon.",
     warnings: ['warning1', 'warning2', 'warning3'],
-    detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269161554830430248/image.png?ex=66af0e4e&is=66adbcce&hm=d4c36699900fdf5b5248734ceaa4421ba6489f41e7f5f2c655281d9c1d73acd2&",
+    detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269203586827423835/neee-removebg-preview_1.png?ex=66af3573&is=66ade3f3&hm=56417ffbb2dd9b9b4cdc7be2736aebf6c3272da8653205db303fa6e3d10b5503&",
     temperature: "-100°C",
     current_weather: "Cloudy",
     current_image: "assets/cloud.png",
@@ -70,20 +72,21 @@ export const planets: planet[] = [
       temperature: -40,
       image: "assets/cloud.png",
       day: "Mon",
-    },{
+    }, {
       temperature: -20,
       image: "assets/cloud.png",
       day: "Tue",
-    },{
+    }, {
       temperature: -15,
       image: "assets/rain.png",
       day: "Wed",
-    },]
+    }],
+    three60image: ''
   },
   {
     name: "Uranus",
     guid: "uranus",
-    imageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269126181299683408/ura-removebg-preview.png?ex=66aeed5c&is=66ad9bdc&hm=49a96db932bbfc5b11a6aab047f9184bee916f97ffe8e4447b1cf5db79d4ec73&",
+    imageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269254399688048673/d-removebg-preview.png?ex=66af64c6&is=66ae1346&hm=8e3d397689db808919647a5a04e8b9c69aedef5438f1a2832dc637b5d8bc0dc4&",
     description: "Uranus is the seventh planet from the Sun, known for its unique sideways rotation, icy composition, faint rings, and 27 moons, including Titania and Oberon.",
     warnings: ['warning1', 'warning2', 'warning3'],
     detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269202709735800843/iqi.png?ex=66af34a2&is=66ade322&hm=378a117d18b5008c8eb4f43845f5f3e1ad741e3108d0bb17105dd4c5ed54ff9f&",
@@ -96,15 +99,16 @@ export const planets: planet[] = [
       temperature: 30,
       image: "assets/cloud.png",
       day: "Mon",
-    },{
+    }, {
       temperature: 20,
       image: "assets/cloud.png",
       day: "Tue",
-    },{
+    }, {
       temperature: -15,
       image: "assets/cloud.png",
       day: "Wed",
-    },]
+    }],
+    three60image: ''
   },
   {
     name: "Neptune",
@@ -122,15 +126,16 @@ export const planets: planet[] = [
       temperature: -40,
       image: "assets/cloud.png",
       day: "Mon",
-    },{
+    }, {
       temperature: -20,
       image: "assets/storm.png",
       day: "Tue",
-    },{
+    }, {
       temperature: -15,
       image: "assets/cloud.png",
       day: "Wed",
-    },]
+    }],
+    three60image: ''
   },
   {
     name: "Pluto",
@@ -148,14 +153,15 @@ export const planets: planet[] = [
       temperature: -40,
       image: "assets/storm.png",
       day: "Mon",
-    },{
+    }, {
       temperature: -20,
       image: "assets/rain.png",
       day: "Tue",
-    },{
+    }, {
       temperature: -15,
       image: "assets/cloud.png",
       day: "Wed",
-    },]
+    }],
+    three60image: ''
   }
 ]

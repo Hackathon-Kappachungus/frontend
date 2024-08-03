@@ -14,16 +14,6 @@ export type planet = {
     temperature: number,
     image: string,
     day: string,
-  }[]
-
-  // overall_review: number,
-  // attractions: number,
-  // safety: number,
-  // affordability: number,
-  // transportation: number,
-  // comment: {
-  //   rating: number,
-  //   comment: string,day
-  // }[]
-
+  }[],
+  three60image: string
 }

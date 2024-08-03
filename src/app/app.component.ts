@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,18 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'hackathon-frontned';
+
+  @ViewChild('background') background?: ElementRef<HTMLElement>;
+
+  // mouse move
+  @HostListener('mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    // move the background image
+    const x = event.clientX / window.innerWidth;
+    const y = event.clientY / window.innerHeight;
+
+    if (this.background) {
+      this.background.nativeElement.style.backgroundPosition = `${x * 5}% ${y * 5}%`;
+    }
+  }
 }
