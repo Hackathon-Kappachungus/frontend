@@ -3,6 +3,7 @@
 @for (phrase of phrases; track $index) {
   <audio [src]="phrase.url" #audio></audio>
   <button (click)="audio.play()">Play</button>
-
+  <span>{{ phrase.phrase }}</span>
+  <br><br> <!-- Add a line break here -->
 }
 
