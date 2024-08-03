@@ -90,8 +90,8 @@ export const planets: planet[] = [
     temperature: "-10°C",
     current_weather: "Stormy",
     current_image: "assets/storm.png",
-    big_warning: "THUNDERSTORMS",
-    small_warning: "Please wear waterproof gear",
+    big_warning: "SEVERE DUST STORMS",
+    small_warning: "Please wear a dust mask",
     weather: [{
       temperature: 30,
       image: "assets/cloud.png",
@@ -142,8 +142,8 @@ export const planets: planet[] = [
     temperature: "-70°C",
     current_weather: "cloudy",
     current_image: "assets/cloud.png",
-    big_warning: "THUNDERSTORMS",
-    small_warning: "Please wear waterproof gear",
+    big_warning: "Freezing",
+    small_warning: "Layer Up",
     weather: [{
       temperature: -40,
       image: "assets/storm.png",

@@ -10,6 +10,13 @@ import {PlanetsService} from "../../services/planets.service";
   styleUrls: ['./weather-widget.component.scss'],
 })
 export class WeatherWidgetComponent {
+  planetGuid = input.required<string>();
+
+
+  planetService = inject(PlanetsService);
+  planet = computed(() => {
+    return this.planetService.planets().find(planet => planet.guid === this.planetGuid());
+  });
   // planetGuid = input.required<string>();
   // planetService = inject(PlanetsService);
   // planet = computed(() => {
