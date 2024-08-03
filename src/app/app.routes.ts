@@ -8,7 +8,7 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'planet',
+    path: 'planet/:planetGuid',
     component: PlanetComponent
   }
 ];
