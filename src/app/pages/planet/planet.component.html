@@ -1,8 +1,11 @@
 <div class="p-10 flex flex-col min-h-[100svh] relative font-outfit max-w-[1000px] mx-auto">
 
   @if (planet(); as planet) {
-    <div>
-      <div class="uppercase font-semibold text-[65px]">
+    <div class="flex flex-col">
+      <a [routerLink]="['/']">
+        ← Back to space
+      </a>
+      <div class="uppercase font-semibold text-[65px] -mt-3 pointer-events-none">
         {{ planet.name }}
       </div>
     </div>
@@ -12,16 +15,20 @@
     <router-outlet/>
   </div>
 
-  <div class="flex flex-row justify-end gap-10 uppercase underline w-full z-10">
-    <div [routerLink]="['language']">
+  <div class="flex flex-row justify-end gap-10 uppercase w-full z-10">
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['underline']"
+       [routerLink]="['/planet', planet()?.guid]">
+      Weather
+    </a>
+    <a [routerLinkActive]="['underline']" [routerLink]="['language']">
       Language
-    </div>
-    <div>
+    </a>
+    <a [routerLinkActive]="['underline']" [routerLink]="['reviews']">
       Reviews
-    </div>
-    <div>
-      Attractions
-    </div>
+    </a>
+    <a [routerLinkActive]="['underline']" [routerLink]="['live-view']">
+      Live view
+    </a>
   </div>
 
 </div>

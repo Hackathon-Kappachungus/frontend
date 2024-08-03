@@ -7,7 +7,7 @@
 
   <div class="grid grid-cols-3 flex-1 items-center text-center">
     @for (planet of planetsService.planets(); track planet.guid) {
-      <div [routerLink]="['/planet', planet.guid]" class="group cursor-pointer">
+      <div [routerLink]="['/planet', planet.guid]" class="group cursor-pointer" appRandomMove>
         <img [src]="planet.imageUrl" class="group-hover:scale-110 transition size-[200px] mx-auto object-contain">
         <p class="opacity-0 group-hover:opacity-100 transition">{{ planet.name }}</p>
       </div>

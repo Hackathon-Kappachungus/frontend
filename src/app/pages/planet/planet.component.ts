@@ -1,7 +1,7 @@
 import {Component, computed, inject, input} from '@angular/core';
 import {PlanetsService} from "../../services/planets.service";
 import {WeatherWidgetComponent} from "../../components/weather-widget/weather-widget.component";
-import {RouterLink, RouterOutlet} from "@angular/router";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import { PlanetSelectorComponent } from "../../components/planet-selector/planet-selector.component";
 
 @Component({
@@ -11,7 +11,8 @@ import { PlanetSelectorComponent } from "../../components/planet-selector/planet
     WeatherWidgetComponent,
     RouterOutlet,
     RouterLink,
-    PlanetSelectorComponent
+    PlanetSelectorComponent,
+    RouterLinkActive
 ],
   templateUrl: './planet.component.html',
   styleUrl: './planet.component.scss'
