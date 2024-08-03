@@ -1,32 +1,35 @@
-<div class="weather-widget" *ngIf="weatherData">
-    <div class="top-section">
-        <div class="current-weather">
-            <img src="http://openweathermap.org/img/wn/{{ weatherData.current.weather[0].icon }}@2x.png" alt="Weather icon">
-            <p>{{ weatherData.current.temp }}°C</p>
+<div class="weather-widget p-6 max-w-md mx-auto bg-transparent rounded-xl shadow-md space-y-4" *ngIf="weatherData">
+    <div class="top-section flex justify-between items-center">
+        <div class="current-weather text-center">
+            <img src="assets/sunny.png" alt="Weather icon" class="w-16 h-16 mx-auto">
+            <p class="text-3xl font-bold">35°</p>
+            <p class="text-lg">Sunny</p>
         </div>
-        <div class="additional-info">
-            <div class="info-item">
-                <img src="assets/wind.png" alt="Wind icon">
-                <p>{{ weatherData.current.wind_speed }} m/s</p>
-            </div>
-            <div class="info-item">
-                <img src="assets/cloud.png" alt="Cloud icon">
-                <p>{{ weatherData.current.clouds }}%</p>
-            </div>
-            <div class="info-item">
-                <img src="assets/snow.png" alt="Snow icon">
-                <p>{{ weatherData.current.snow ? weatherData.current.snow['1h'] : 'No snow' }}</p>
-            </div>
+        <div class="additional-info text-center space-y-2">
+            <img src="assets/duststorm.png" alt="Dust storm icon" class="w-8 h-8 mx-auto">
+            <img src="assets/warning.png" alt="Warning icon" class="w-8 h-8 mx-auto">
+            <p class="text-red-500 font-bold">Severe Dust Storms</p>
+            <p class="text-yellow-500">Please wear a dust mask</p>
         </div>
     </div>
-    <div class="bottom-section">
-        <div class="forecast-item" *ngFor="let day of weatherData.daily; let i = index" [hidden]="i === 0">
-            <p>{{ getDayOfWeek(i) }}</p>
-            <img src="http://openweathermap.org/img/wn/{{ day.weather[0].icon }}@2x.png" alt="Weather icon">
-            <p>{{ day.temp.day }}°C</p>
+    <div class="bottom-section grid grid-cols-3 gap-4 text-center">
+        <div class="day-item bg-gray-100 p-4 rounded-lg shadow">
+            <p class="text-2xl">24°C</p>
+            <img src="assets/cloud.png" alt="Cloud icon" class="w-8 h-8 mx-auto">
+            <p>{{ weatherData.current.clouds }}%</p>
+        </div>
+        <div class="day-item bg-gray-100 p-4 rounded-lg shadow">
+            <p class="text-2xl">24°C</p>
+            <img src="assets/cloud.png" alt="Cloud icon" class="w-8 h-8 mx-auto">
+            <p>{{ weatherData.current.snow ? weatherData.current.snow['1h'] : 'No snow' }}</p>
+        </div>
+        <div class="day-item bg-gray-100 p-4 rounded-lg shadow">
+            <p class="text-2xl">24°C</p>
+            <img src="assets/cloud.png" alt="Cloud icon" class="w-8 h-8 mx-auto">
+            <p>{{ weatherData.current.snow ? weatherData.current.snow['1h'] : 'No snow' }}</p>
         </div>
     </div>
 </div>
-<div *ngIf="!weatherData">
+<div *ngIf="!weatherData" class="text-center mt-6">
     <p>Loading...</p>
 </div>
