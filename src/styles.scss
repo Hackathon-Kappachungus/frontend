@@ -8,3 +8,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 * {
   color: #fff;
 }
+
+
+.translucent-panel {
+  --mat-expansion-container-background-color: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(10px);
+}
