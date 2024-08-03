@@ -1,4 +1,4 @@
-<div class="p-10 flex flex-col min-h-[100svh] relative font-outfit max-w-[1000px] mx-auto">
+<div class="p-10 flex flex-col min-h-[100svh] relative font-outfit max-w-[1200px] mx-auto">
 
   @if (planet(); as planet) {
     <div class="flex flex-col">
@@ -15,18 +15,18 @@
     <router-outlet/>
   </div>
 
-  <div class="flex flex-row justify-end gap-10 uppercase w-full z-10">
-    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['underline']"
+  <div class="flex flex-row justify-end gap-6 uppercase w-full z-10">
+    <a class="hover:font-bold min-w-[6rem]" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['underline']"
        [routerLink]="['/planet', planet()?.guid]">
       Weather
     </a>
-    <a [routerLinkActive]="['underline']" [routerLink]="['language']">
+    <a class="hover:font-bold min-w-[6rem]"  [routerLinkActive]="['underline']" [routerLink]="['language']">
       Language
     </a>
-    <a [routerLinkActive]="['underline']" [routerLink]="['reviews']">
+    <a class="hover:font-bold min-w-[6rem]" [routerLinkActive]="['underline']" [routerLink]="['reviews']">
       Reviews
     </a>
-    <a [routerLinkActive]="['underline']" [routerLink]="['live-view']">
+    <a class="hover:font-bold min-w-[6rem]" [routerLinkActive]="['underline']" [routerLink]="['live-view']">
       Live view
     </a>
   </div>
