@@ -18,7 +18,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .transparent-menu{
-  --mat-menu-container-color : rgba(0, 0, 0, 0.4  ) !important;
+  --mat-menu-container-color : rgba(0, 0, 0, 0  ) !important;
+  border: none;
 }
 
 /* Apply default font family */
