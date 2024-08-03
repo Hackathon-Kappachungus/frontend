@@ -1,11 +1,13 @@
 import {Component, computed, inject, input, OnInit} from '@angular/core';
 import { NgForOf, NgIf } from '@angular/common';
 import {PlanetsService} from "../../services/planets.service";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-weather-widget',
   standalone: true,
-  imports: [NgIf, NgForOf],
+  imports: [NgIf, NgForOf,CommonModule
+  ],
   templateUrl: './weather-widget.component.html',
   styleUrls: ['./weather-widget.component.scss'],
 })
