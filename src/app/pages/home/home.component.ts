@@ -47,8 +47,12 @@ export class HomeComponent {
   async compressImage(image: HTMLImageElement): Promise<string> {
     const canvas = document.createElement('canvas');
     const picaInstance = pica();
-    canvas.width = image.width / 2;  // Example: reduce width by half
-    canvas.height = image.height / 2;  // Example: reduce height by half
+
+    const targetWidth = 1920;
+    const targetHeight = 1080;
+
+    canvas.width = targetWidth;
+    canvas.height = targetHeight;
 
     await picaInstance.resize(image, canvas, {
       quality: 3,
