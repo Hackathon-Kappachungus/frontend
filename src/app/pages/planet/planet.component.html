@@ -5,17 +5,17 @@
       <a [routerLink]="['/']">
         ← Back to space
       </a>
-      <div class="uppercase font-semibold text-[65px] -mt-3 pointer-events-none">
+      <div class="uppercase font-semibold text-[50px] md:text-[65px] my-6 md:-mt-3 pointer-events-none">
         {{ planet.name }}
       </div>
     </div>
   }
 
-  <div class="flex-1 z-10 w-full">
+  <div class="flex-1 z-10 w-full mb-10">
     <router-outlet/>
   </div>
 
-  <div class="flex flex-row justify-end gap-6 uppercase w-full z-10">
+  <div class="flex flex-col md:flex-row justify-end items-end gap-6 uppercase w-full z-10">
     <a class="hover:font-bold min-w-[6rem]" [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['underline']"
        [routerLink]="['/planet', planet()?.guid]">
       Weather
@@ -34,7 +34,7 @@
 </div>
 @if (planet(); as planet) {
   <img [src]="planet.detailImageUrl"
-       class="absolute left-[0%] bottom-[0%] transform z-0 h-[60svh] w-[50svw] object-contain object-left-bottom"/>
+       class="fixed left-[0%] bottom-[0%] transform z-0 h-[60svh] w-[50svw] object-contain object-left-bottom"/>
 }
 
 <app-planet-selector class="absolute top-10 right-20"/>
