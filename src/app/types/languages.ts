@@ -1,7 +1,9 @@
-export type languageCategory = {
+export type language = {
   guid: string,
-  name: string,
-  phrases: languagePhrase[],
+  category: {
+    name: string,
+    phrases: languagePhrase[],
+  }[],
 }
 
 type languagePhrase = {
