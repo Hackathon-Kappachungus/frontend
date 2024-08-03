@@ -1,35 +1,43 @@
-<div class="weather-widget p-6 max-w-md mx-auto bg-transparent rounded-xl shadow-md space-y-4" *ngIf="weatherData">
-    <div class="top-section flex justify-between items-center">
-        <div class="current-weather text-center">
-            <img src="assets/sunny.png" alt="Weather icon" class="w-16 h-16 mx-auto">
-            <p class="text-3xl font-bold">35°</p>
-            <p class="text-lg">Sunny</p>
+<div class="weather-widget p-6 max-w-80% max-h-screen mx-auto bg-transparent rounded-xl shadow-lg space-y-16 relative" *ngIf="weatherData">
+    <!-- Top Section -->
+    <div class="top-section flex flex-col md:flex-row items-center justify-between">
+        <div class="flex flex-col md:flex-row items-center text-center">
+            <img src="assets/sunny.png" alt="Weather icon" class="w-20 h-20 md:w-24 md:h-24 mx-auto">
+            <div class="flex flex-col md:ml-4">
+                <p class="text-4xl md:text-5xl font-bold">35°</p>
+                <p class="text-xl md:text-2xl">Sunny</p>
+            </div>
         </div>
-        <div class="additional-info text-center space-y-2">
-            <img src="assets/duststorm.png" alt="Dust storm icon" class="w-8 h-8 mx-auto">
-            <img src="assets/warning.png" alt="Warning icon" class="w-8 h-8 mx-auto">
-            <p class="text-red-500 font-bold">Severe Dust Storms</p>
-            <p class="text-yellow-500">Please wear a dust mask</p>
+        <div class="flex flex-col md:flex-row items-center mt-4 gap-3">
+            <img src="assets/duststorm.png" alt="Dust storm icon" class="w-20 h-20 md:w-26 md:h-26">
+            <img src="assets/warning.png" alt="Warning icon" class="w-20 h-20 md:w-26 md:h-26">
+            <div class="flex flex-col text-center">
+                <p class="text-red-600 text-2xl md:text-2xl font-bold">SEVERE DUST SANDSTORMS</p>
+                <p class="text-yellow-600 text-sm md:text-xl">Please wear a dust mask</p>
+            </div>
         </div>
     </div>
-    <div class="bottom-section grid grid-cols-3 gap-4 text-center">
-        <div class="day-item bg-transparent p-4 rounded-lg shadow">
-            <p class="text-2xl">24°C</p>
-            <img src="assets/cloud.png" alt="Cloud icon" class="w-8 h-8 mx-auto">
-            <p>{{ weatherData.current.clouds }}%</p>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-center ml-[40%]">
+        <div class="day-item bg-transparent p-4 rounded-lg shadow-md">
+            <p class="text-xl md:text-2xl">24°C</p>
+            <img src="assets/cloud.png" alt="Cloud icon" class="w-20 h-20 md:w-20 md:h-20 mx-auto">
+            <p class="text-sm md:text-lg">Mon</p>
         </div>
-        <div class="day-item bg-transparent p-4 rounded-lg shadow">
-            <p class="text-2xl">24°C</p>
-            <img src="assets/cloud.png" alt="Cloud icon" class="w-8 h-8 mx-auto">
-            <p>{{ weatherData.current.snow ? weatherData.current.snow['1h'] : 'No snow' }}</p>
+        <div class="day-item bg-transparent p-4 rounded-lg shadow-md">
+            <p class="text-xl md:text-2xl">24°C</p>
+            <img src="assets/cloud.png" alt="Cloud icon" class="w-20 h-20 md:w-20 md:h-20 mx-auto">
+            <p class="text-sm md:text-lg">Tue</p>
         </div>
-        <div class="day-item bg-transparent p-4 rounded-lg shadow">
-            <p class="text-2xl">24°C</p>
-            <img src="assets/cloud.png" alt="Cloud icon" class="w-8 h-8 mx-auto">
-            <p>{{ weatherData.current.snow ? weatherData.current.snow['1h'] : 'No snow' }}</p>
+        <div class="day-item bg-transparent p-4 rounded-lg shadow-md">
+            <p class="text-xl md:text-2xl">24°C</p>
+            <img src="assets/cloud.png" alt="Cloud icon" class="w-20 h-20 md:w-20 md:h-20 mx-auto">
+            <p class="text-sm md:text-lg">Wed</p>
         </div>
     </div>
 </div>
-<div *ngIf="!weatherData" class="text-center mt-6">
+
+<div *ngIf="!weatherData" class="text-center mt-8 text-xl">
     <p>Loading...</p>
 </div>

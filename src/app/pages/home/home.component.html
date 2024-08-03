@@ -1,5 +1,4 @@
 <p>home works!</p>
-<app-weather-widget/>
 
 @for (planet of planetsService.planets(); track planet.guid) {
   <p [routerLink]="['/planet', planet.guid]">{{ planet.name }}</p>
