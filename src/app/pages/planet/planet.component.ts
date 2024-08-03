@@ -1,7 +1,7 @@
 import {Component, computed, inject, input} from '@angular/core';
 import {PlanetsService} from "../../services/planets.service";
 import {WeatherWidgetComponent} from "../../components/weather-widget/weather-widget.component";
-import {RouterLink, RouterOutlet} from "@angular/router";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-planet',
@@ -9,7 +9,8 @@ import {RouterLink, RouterOutlet} from "@angular/router";
   imports: [
     WeatherWidgetComponent,
     RouterOutlet,
-    RouterLink
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './planet.component.html',
   styleUrl: './planet.component.scss'
