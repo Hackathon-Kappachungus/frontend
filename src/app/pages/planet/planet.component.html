@@ -1,1 +1,7 @@
 <p>planet works!</p>
+
+{{ planet() | json }}
+
+@if (planet(); as planet) {
+  <img [src]="planet.imageUrl"/>
+}
