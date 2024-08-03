@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-language',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './language.component.scss'
 })
 export class LanguageComponent {
-
+  planet = input.required();
+  phrases = [
+    {
+      phrase: 'Hello',
+      url: '/assets/language-sounds/test_tone.mp3'
+    }
+  ];
 }
