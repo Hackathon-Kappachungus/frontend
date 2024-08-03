@@ -9,12 +9,16 @@
           </mat-expansion-panel-header>
 
           @for (phrase of catagory.phrases; track phrase.guid) {
-            <audio [src]="phrase.audioFileUrl" #audio></audio>
-            <button mat-icon-button (click)="audio.play()">
-              <mat-icon>play_arrow</mat-icon>
-            </button>
-            <span>{{ phrase.phrase }} || {{ phrase.translation }}</span>
-            <br><br> <!-- Add a line break here -->
+            <div class="p-2 flex justify-between items-center w-full max-w-1/2 mx-auto bg-gradient-to-r from-black to-[#431810] bg-opacity-80 rounded-l">
+              <div class="flex-grow text-left">
+                <div class="font-bold">{{ phrase.phrase }}</div>
+                <div class="text-sm text-gray-500">{{ phrase.translation }}</div>
+              </div>
+              <button mat-icon-button (click)="audio.play()">
+                <mat-icon>volume_up</mat-icon>
+              </button>
+              <audio [src]="phrase.audioFileUrl" #audio></audio>
+            </div>
           }
         </mat-expansion-panel>
       }
