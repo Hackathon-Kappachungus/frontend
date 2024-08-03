@@ -280,6 +280,40 @@ export class LanguageService {
             },
           ],
         },
+        {
+          name: 'Navigation',
+          phrases: [
+            {
+              guid: 'whereisthespacestation',
+              phrase: 'Where is the space station?',
+              translation: 'ujujeong-geojang-eun eodie issnayo?',
+              audioFileUrl: '/assets/language-sounds/saturn/whereisthespacestation.mp3',
+            },
+            {
+              guid: 'imlost',
+              phrase: 'I\'m Lost',
+              translation: 'naneun gil-eul ilh-eossda',
+              audioFileUrl: '/assets/language-sounds/saturn/imlost.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Shopping',
+          phrases: [
+            {
+              guid: 'howmuchdoesthiscost',
+              phrase: 'How much does this cost?',
+              translation: 'biyong-eun eolmaingayo?',
+              audioFileUrl: '/assets/language-sounds/saturn/howmuchdoesthiscost.mp3',
+            },
+            {
+              guid: 'canipaybycreditcard',
+              phrase: 'Can I pay by credit card?',
+              translation: 'kadeulo gyeolje hal su issnayo?',
+              audioFileUrl: '/assets/language-sounds/saturn/canipaybycreditcard.mp3',
+            },
+          ],
+        },
       ],
     },
   ]);
