@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageComponent } from "../../components/language/language.component";
 
 @Component({
   selector: 'app-home',
