@@ -2,16 +2,17 @@
 @if (isMenuOpen) {
   <div class="h-screen w-screen backdrop-blur-lg z-50" style="position: fixed; top: 0; left: 0;"></div>
 }
+
 <button mat-icon-button [matMenuTriggerFor]="menu" (menuOpened)="onMenuOpen()" (menuClosed)="onMenuClose()">
-  <mat-icon>menu</mat-icon>
+  <mat-icon class="text-6xl" style="overflow: visible;">menu</mat-icon>
 </button>
 
 
 <mat-menu #menu="matMenu" class="transparent-menu">
   @for (planet of planetsService.planets(); track planet.guid) {
-    <button mat-menu-item [routerLink]="['/planet', planet.guid]" class="group cursor-pointer flex items-center">
-      <span class="text-2xl border-b border-b-white border-b-solid flex flex-row gap-1">
-        <div class="w-[20px] grid place-items-center">
+    <button mat-menu-item [routerLink]="['/planet', planet.guid]" class="p-6 m-8 group cursor-pointer flex items-center">
+      <span class="text-4xl border-b-2 border-white border-solid flex flex-row gap-6">
+        <div class="w-[40px] grid place-items-center">
           <img [src]="planet.imageUrl" class="object-contain">
         </div>
         {{ planet.name }}
