@@ -1,1 +1,11 @@
-<p>planet-selector works!</p>
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  @for (planet of planetsService.planets(); track planet.guid) {
+    <button mat-menu-item [routerLink]="['/planet', planet.guid]" class="group cursor-pointer flex items-center">
+      <span class="text-2xl underline"><img [src]="planet.imageUrl" class=" inline h-4 mr-2">{{ planet.name }}</span>
+    </button>
+  }
+</mat-menu>
