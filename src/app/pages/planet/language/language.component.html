@@ -1,0 +1,31 @@
+
+<div style="max-width: 80vw; margin: 0 auto;">
+
+
+a
+
+
+
+  <mat-accordion>
+    @for (catagory of catagories(); track $index) {
+      @if (panelOpened() ==  $index|| panelOpened() == undefined) {
+        <mat-expansion-panel class="!mb-8 uppercase p-10" (opened)="panelOpened.set(0)" (closed)="panelOpened.set(undefined)">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="text-4xl">catagory.name</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          @for (phrase of catagory.phrases; track phrase.guid) {
+            <audio [src]="phrase.audioFileUrl" #audio></audio>
+            <button mat-icon-button (click)="audio.play()">
+              <mat-icon>play_arrow</mat-icon>
+            </button>
+            <span>{{ phrase.phrase }} || {{ phrase.translation }}</span>
+            <br><br> <!-- Add a line break here -->
+          }
+        </mat-expansion-panel>
+      }
+    }
+</mat-accordion>
+
+
+
