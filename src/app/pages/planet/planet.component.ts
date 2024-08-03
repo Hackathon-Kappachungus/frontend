@@ -1,13 +1,10 @@
 import {Component, computed, inject, input} from '@angular/core';
 import {PlanetsService} from "../../services/planets.service";
-import {JsonPipe} from "@angular/common";
 
 @Component({
   selector: 'app-planet',
   standalone: true,
-  imports: [
-    JsonPipe
-  ],
+  imports: [],
   templateUrl: './planet.component.html',
   styleUrl: './planet.component.scss'
 })
