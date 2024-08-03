@@ -1,8 +1,15 @@
 <p>language works!</p>
 
+
+
+
+
+
 @for (phrase of phrases; track $index) {
   <audio [src]="phrase.url" #audio></audio>
-  <button (click)="audio.play()">Play</button>
+  <button mat-icon-button (click)="audio.play()">
+    <mat-icon>play_arrow</mat-icon>
+  </button>
   <span>{{ phrase.phrase }}</span>
   <br><br> <!-- Add a line break here -->
 }
