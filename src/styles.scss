@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -13,4 +15,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .translucent-panel {
   --mat-expansion-container-background-color: rgba(0, 0, 0, 0.4) !important;
   backdrop-filter: blur(10px);
+}
+
+/* Apply default font family */
+body {
+  @apply font-outfit;
 }

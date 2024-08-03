@@ -1,6 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { PlanetsService } from '../../services/planets.service';
+import {Component, inject} from '@angular/core';
+import {PlanetsService} from "../../services/planets.service";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-home',
