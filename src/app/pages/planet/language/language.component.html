@@ -1,31 +1,32 @@
+<mat-accordion>
+  @for (catagory of catagories(); track $index) {
+    @if (panelOpened() == $index || panelOpened() == undefined) {
+      <mat-expansion-panel class="translucent-panel !mb-8 uppercase p-10 !bg-opacity-30 !backdrop-blur-md"
+                           (opened)="panelOpened.set($index)" (closed)="panelOpened.set(undefined)">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="text-4xl my-8">{{ catagory.name }}</mat-panel-title>
+        </mat-expansion-panel-header>
 
-<div style="max-width: 80vw; margin: 0 auto;">
-  <mat-accordion class = "">
-    @for (catagory of catagories(); track $index) {
-      @if (panelOpened() ==  $index|| panelOpened() == undefined) {
-        <mat-expansion-panel class="translucent-panel !mb-8 uppercase p-10 !bg-opacity-30 !backdrop-blur-md" (opened)="panelOpened.set($index)" (closed)="panelOpened.set(undefined)">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-4xl">{{catagory.name}}</mat-panel-title>
-          </mat-expansion-panel-header>
-
-          <div class="grid grid-cols-2 gap-8">
-            @for (phrase of catagory.phrases; track phrase.guid) {
-              <div class="cursor-pointer p-2 flex justify-between items-center w-full max-w-1/2 mx-auto bg-gradient-to-r from-black to-[#431810] bg-opacity-80 rounded-lg mb-4" (click)="audio.play()">
-                <div class="flex-grow text-left mx-1">
-                  <div class="font-bold">{{ phrase.phrase }}</div>
-                  <div class="text-sm text-gray-500">{{ phrase.translation }}</div>
-                </div>
-                <button mat-icon-button class="mx-1">
-                  <mat-icon>volume_up</mat-icon>
-                </button>
-                <audio [src]="phrase.audioFileUrl" #audio></audio>
+        <div class="grid grid-cols-2 gap-8">
+          @for (phrase of catagory.phrases; track phrase.guid) {
+            <div
+              class="cursor-pointer p-2 flex justify-between items-center w-full max-w-1/2 mx-auto bg-gradient-to-r from-black to-[#431810] bg-opacity-80 rounded-lg mb-4"
+              (click)="audio.play()">
+              <div class="flex-grow text-left mx-1">
+                <div class="font-bold">{{ phrase.phrase }}</div>
+                <div class="text-sm text-gray-500">{{ phrase.translation }}</div>
               </div>
-            }
-          </div>
+              <button mat-icon-button class="mx-1">
+                <mat-icon>volume_up</mat-icon>
+              </button>
+              <audio [src]="phrase.audioFileUrl" #audio></audio>
+            </div>
+          }
+        </div>
 
-        </mat-expansion-panel>
-      }
+      </mat-expansion-panel>
     }
+  }
 </mat-accordion>
 
 

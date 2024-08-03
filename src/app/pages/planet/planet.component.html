@@ -1,11 +1,9 @@
 <div class="p-10 flex flex-col min-h-[100svh] relative font-outfit max-w-[1000px] mx-auto">
 
   @if (planet(); as planet) {
-    <div>
-      <div class="uppercase font-semibold text-[65px]">
-        {{ planet.name }}
-      </div>
-    </div>
+    <h1 class="uppercase font-semibold text-[65px]">
+      {{ planet.name }}
+    </h1>
   }
 
   <div class="flex-1 z-10 w-full">
