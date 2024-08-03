@@ -7,7 +7,6 @@ export type planet = {
   detailImageUrl: string,
   temperature: string,
   current_weather: string,
-  current_image: string,
   big_warning: string,
   small_warning: string,
   weather: {

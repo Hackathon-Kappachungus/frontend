@@ -1,6 +1,5 @@
-import {Component, computed, inject, input, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForOf, NgIf } from '@angular/common';
-import {PlanetsService} from "../../services/planets.service";
 
 @Component({
   selector: 'app-weather-widget',
@@ -10,12 +9,6 @@ import {PlanetsService} from "../../services/planets.service";
   styleUrls: ['./weather-widget.component.scss'],
 })
 export class WeatherWidgetComponent implements OnInit {
-  planetGuid = input.required<string>();
-  planetService = inject(PlanetsService);
-  planet = computed(() => {
-    return this.planetService.planets().find(planet => planet.guid === this.planetGuid());
-  });
-
   weatherData: any;
   lat: number = 36.8509; // Default latitude (e.g., Auckland)
   lon: number = 174.7645; // Default longitude (e.g., Auckland)
