@@ -10,16 +10,17 @@
     <router-outlet/>
   </div>
 
-  <div class="flex flex-row justify-end gap-10 uppercase underline w-full z-10">
-    <div [routerLink]="['language']">
+  <div class="flex flex-row justify-end gap-10 uppercase w-full z-10">
+    <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['underline']"
+       [routerLink]="['/planet', planet()?.guid]">
+      Weather
+    </a>
+    <a [routerLinkActive]="['underline']" [routerLink]="['language']">
       Language
-    </div>
-    <div>
+    </a>
+    <a [routerLinkActive]="['underline']" [routerLink]="['reviews']">
       Reviews
-    </div>
-    <div>
-      Attractions
-    </div>
+    </a>
   </div>
 
 </div>
