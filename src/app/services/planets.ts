@@ -7,7 +7,7 @@ export const planets: planet[] = [
     imageUrl: "https://media.discordapp.net/attachments/563283988265959433/1269124473790136392/mars-homepage.png?ex=66aeebc5&is=66ad9a45&hm=38442deb3ee4b9e2548436d5cc0d9a7f94e7ed1808bf701ab62dd2cbda2bdd91&=&format=webp&quality=lossless&width=1224&height=816",
     description: "Mars, the fourth planet from the Sun, is known as the \"Red Planet\" due to its reddish appearance and is a key focus of study for its potential to harbor past or present life.",
     warnings: ['warning1', 'warning2', 'warning3'],
-    detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269262777281675264/mm-removebg-preview.png?ex=66af6c93&is=66ae1b13&hm=533dfd1c76175061d6135f46bd05e3393eda5f95b30c06cbad877593bf89282d&",
+    detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269264083895713842/ss-removebg-preview.png?ex=66af6dcb&is=66ae1c4b&hm=0b052c14d5b71e58ca36fab9ccc32e59630a914aa5903389dd00c6967903c975&",
     temperature: "24°C",
     current_weather: "Sunny",
     current_image: "assets/sunny.png",
@@ -81,7 +81,7 @@ export const planets: planet[] = [
       image: "assets/rain.png",
       day: "Wed",
     }],
-    three60image: ''
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269266096356331643/beautiful-panoramic-high-angle-shot-namib-desert-mountains-kanaan-namibia.jpg?ex=66af6fab&is=66ae1e2b&hm=f754e3cd40bd7c80d17570d43021e230faf6b78282464f580709fec1a7c6e278&'
   },
   {
     name: "Uranus",
@@ -108,7 +108,7 @@ export const planets: planet[] = [
       image: "assets/cloud.png",
       day: "Wed",
     }],
-    three60image: ''
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269268726746972181/desert-1170055_1280.jpg?ex=66af721e&is=66ae209e&hm=a7957d9b5319b305deaed170caf59bb2cd156e747034cef88692c11b2e302e4b&'
   },
   {
     name: "Neptune",
@@ -135,7 +135,7 @@ export const planets: planet[] = [
       image: "assets/cloud.png",
       day: "Wed",
     }],
-    three60image: ''
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269267627289612328/panoramic-view-sea.jpg?ex=66af7118&is=66ae1f98&hm=76b19c0351e5534bc86c31ab63558c7cecf57634da56be88f05be8d9da276763&'
   },
   {
     name: "Pluto",
@@ -162,6 +162,6 @@ export const planets: planet[] = [
       image: "assets/cloud.png",
       day: "Wed",
     }],
-    three60image: ''
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269270374474846268/winter-2383930_1280.jpg?ex=66af73a7&is=66ae2227&hm=5d0d877f80e888dffe1a9c529040f086a91f7dbf661ffec76a1ff3305d7c544d&'
   }
 ]
