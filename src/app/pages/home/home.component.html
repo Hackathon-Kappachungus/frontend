@@ -5,7 +5,7 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-3 flex-1 items-center text-center">
+  <div class="grid grid-cols-2 md:grid-cols-3 flex-1 items-center text-center">
     @for (planet of planetsService.planets(); track planet.guid) {
       @if (!planet.hideFromHome) {
         <div [routerLink]="['/planet', planet.guid]" class="group cursor-pointer" appRandomMove>
