@@ -4,4 +4,5 @@ export type planet = {
   description: string,
   imageUrl: string,
   warnings: string[],
+  detailImageUrl: string,
 }
