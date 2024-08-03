@@ -15,5 +15,6 @@ export type planet = {
     image: string,
     day: string,
   }[],
-  three60image: string
+  three60image: string,
+  hideFromHome?: boolean,
 }
