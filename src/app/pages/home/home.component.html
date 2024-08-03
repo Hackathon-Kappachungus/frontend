@@ -3,4 +3,5 @@
 @for (planet of planetsService.planets(); track planet.guid) {
   <p [routerLink]="['/planet', planet.guid]">{{ planet.name }}</p>
 }
+
 <app-language planet=""></app-language>
