@@ -164,5 +164,33 @@ export const planets: planet[] = [
     }],
     three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269270374474846268/winter-2383930_1280.jpg?ex=66af73a7&is=66ae2227&hm=5d0d877f80e888dffe1a9c529040f086a91f7dbf661ffec76a1ff3305d7c544d&',
     hideFromHome: false,
+  },
+  {
+    name: "Lost Earth",
+    guid: "earth",
+    imageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269126181811126272/plut-removebg-preview.png?ex=66aeed5c&is=66ad9bdc&hm=f9662c06af0c8ea7264cd788e9a55c1399f38ef02c4d815bdd42f4a16f0292e0&",
+    description: "Pluto is a dwarf planet in the Kuiper Belt, known for its icy surface, eccentric orbit, and five moons, with Charon being the largest.",
+    warnings: ['warning1', 'warning2', 'warning3'],
+    detailImageUrl: "https://cdn.discordapp.com/attachments/563283988265959433/1269503004336459776/weww-removebg-preview.png?ex=66b04c4e&is=66aeface&hm=4397af5ad34d7197f1e872160c024cbb2b5f394f497c3e7192e8ad7dbd3e0223&",
+    temperature: "Error",
+    current_weather: "Error",
+    current_image: "assets/cloud.png",
+    big_warning: "Error",
+    small_warning: "Error",
+    weather: [{
+      temperature: 10000,
+      image: "assets/storm.png",
+      day: "Mon",
+    }, {
+      temperature: 10000,
+      image: "assets/storm.png",
+      day: "Tue",
+    }, {
+      temperature: 15000,
+      image: "assets/storm.png",
+      day: "Wed",
+    }],
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269500878906327140/Screenshot_2024-08-04_at_3.42.33_PM.png?ex=66b04a53&is=66aef8d3&hm=71347cd4d75a9607e19d8e768355eb77926264903328fd774038ed1b98632ea3&',
+    hideFromHome: true,
   }
 ]
