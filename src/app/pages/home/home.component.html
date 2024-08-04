@@ -1,7 +1,7 @@
 <div class="min-h-svh p-10 flex flex-col">
   <div class="flex flex-row gap-10 uppercase">
-    <div class="mr-auto">
-      Travel guide app
+    <div class="mr-auto text-2xl">
+      Guide to the Galaxy
     </div>
   </div>
 
@@ -26,8 +26,8 @@
 </div>
 
 @if (isLoading()) {
-
-  <div class="fixed h-full w-full bg-black top-0 left-0">
-    loading....
+  <div class="grid place-items-center fixed h-full w-full bg-black top-0 left-0">
+    <img src="assets/loading.gif" class="mx-auto">
+    <p>Detecting Planet...</p>
   </div>
 }

@@ -1,20 +1,26 @@
 <div
-  class="weather-widget md:p-6 w-full bg-transparent rounded-xl space-y-16 relative">
+  class="weather-widget md:p-6 w-full bg-transparent rounded-xl space-y-16 md:space-y-48  relative">
   <!-- Top Section -->
-  <div class="top-section flex flex-col md:flex-row items-center justify-between w-full">
-    <div class="flex flex-col md:flex-row items-center text-center">
-      <img [src]="planet()?.current_image" alt="Weather icon" class="size-48 md:size-24 mx-auto">
+  <div class="top-section flex flex-col lg:flex-row items-center justify-between w-full">
+    <div class="flex flex-col md:flex-row items-center text-center md:mt-24">
+      <img [src]="planet()?.current_image" alt="Weather icon" class="size-48 md:size-48 mx-auto">
       <div class="flex flex-row md:flex-col items-center gap-x-5 md:ml-4">
-        <p class="text-4xl md:text-5xl font-bold">{{ planet()?.temperature }}</p>
-        <p class="text-xl md:text-2xl">{{ planet()?.current_weather }}</p>
+        <p class="text-4xl md:text-[6rem] leading-[6rem] font-bold">{{ planet()?.temperature }}</p>
+        <p class="text-xl md:text-4xl">{{ planet()?.current_weather }}</p>
       </div>
     </div>
 
     <div class="flex flex-row items-center mt-4 gap-3">
-      <img alt="Dust storm icon" class="w-20 h-20 md:w-26 md:h-26" src="assets/duststorm.png">
+      @if (planet()?.big_warning === 'Freezing') {
+        <img alt="Warning icon" class="hidden md:block size-16" src="assets/snowflake.png">
+      } @else if (planet()?.big_warning === 'THUNDERSTORMS') {
+        <img alt="Warning icon" class="hidden md:block md:size-16" src="assets/lightning.png">
+      } @else {
+        <img alt="Warning icon" class="hidden md:block md:size-26" src="assets/duststorm.png">
+      }
       <img alt="Warning icon" class="hidden md:block md:size-26" src="assets/warning.png">
       <div class="flex flex-col text-center">
-        <p class="text-red-600 text-2xl md:text-2xl font-bold">{{ planet()?.big_warning }}</p>
+        <p class="text-2xl md:text-2xl font-bold" [ngClass]="{'text-red-600': planet()?.big_warning !== 'Freezing', 'text-teal-400': planet()?.big_warning === 'Freezing', 'text-yellow-400': planet()?.big_warning === 'THUNDERSTORMS'}">{{ planet()?.big_warning }}</p>
         <p class="text-yellow-600 text-sm md:text-xl">{{ planet()?.small_warning }}</p>
       </div>
     </div>
@@ -22,7 +28,7 @@
 
   <div class="grid grid-cols-3 md:flex flex-row gap-4 md:gap-6 text-center justify-end">
     @for (item of planet()?.weather; track $index) {
-      <div class="day-item bg-gray-900 bg-opacity-90 py-4 md:px-8 rounded-lg shadow-md">
+      <div class="day-item bg-zinc-900 bg-opacity-70 py-6 md:px-8 rounded-lg shadow-md">
         <p class="text-xl md:text-2xl px-8 md:px-0">{{ item.temperature }}</p>
         <img alt="icon" class="size-20 md:size-20 mx-auto object-cover !overflow-visible" [src]="item.image">
         <p class="text-sm md:text-lg px-8 md:px-0 ">{{ item.day }}</p>
