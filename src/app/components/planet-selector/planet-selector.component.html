@@ -1,16 +1,18 @@
-
 @if (isMenuOpen) {
   <div class="h-screen w-screen backdrop-blur-lg z-50" style="position: fixed; top: 0; left: 0;"></div>
 }
 
-<button mat-icon-button [matMenuTriggerFor]="menu" (menuOpened)="onMenuOpen()" (menuClosed)="onMenuClose()" style="outline: none;">
+<button (menuClosed)="onMenuClose()" (menuOpened)="onMenuOpen()" [matMenuTriggerFor]="menu" mat-icon-button
+        style="outline: none;">
   <mat-icon class="text-6xl" style="overflow: visible;">menu</mat-icon>
 </button>
 
 
 <mat-menu #menu="matMenu" class="transparent-menu">
   @for (planet of planetsService.planets(); track planet.guid) {
-    <button mat-menu-item [routerLink]="['/planet', planet.guid]" class="p-6 m-8 group cursor-pointer flex items-center">
+    @if (!planet.hideFromHome) {
+      <button mat-menu-item [routerLink]="['/planet', planet.guid]"
+              class="p-6 m-8 group cursor-pointer flex items-center">
       <span class="text-4xl flex flex-row gap-6 my-6">
         <div class="w-[40px] grid place-items-center">
           <img [src]="planet.imageUrl" class="object-contain">
@@ -20,6 +22,7 @@
           {{ planet.name }}
         </div>
       </span>
-    </button>
+      </button>
+    }
   }
 </mat-menu>
