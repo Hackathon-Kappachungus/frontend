@@ -1,8 +1,8 @@
 <div
-  class="weather-widget md:p-6 w-full bg-transparent rounded-xl space-y-16 md:space-y-48  relative">
+  class="weather-widget md:p-6 w-full bg-transparent rounded-xl space-y-16  relative">
   <!-- Top Section -->
   <div class="top-section flex flex-col lg:flex-row items-center justify-between w-full">
-    <div class="flex flex-col md:flex-row items-center text-center md:mt-24">
+    <div class="flex flex-col md:flex-row items-center text-center md:mt-6">
       <img [src]="planet()?.current_image" alt="Weather icon" class="size-48 md:size-48 mx-auto">
       <div class="flex flex-row md:flex-col items-center gap-x-5 md:ml-4">
         <p class="text-4xl md:text-[6rem] leading-[6rem] font-bold">{{ planet()?.temperature }}</p>
@@ -20,7 +20,9 @@
       }
       <img alt="Warning icon" class="hidden md:block md:size-26" src="assets/warning.png">
       <div class="flex flex-col text-center">
-        <p class="text-2xl md:text-2xl font-bold" [ngClass]="{'text-red-600': planet()?.big_warning !== 'Freezing', 'text-teal-400': planet()?.big_warning === 'Freezing', 'text-yellow-400': planet()?.big_warning === 'THUNDERSTORMS'}">{{ planet()?.big_warning }}</p>
+        <p
+          [ngClass]="{'text-red-600': planet()?.big_warning !== 'Freezing', 'text-teal-400': planet()?.big_warning === 'Freezing', 'text-yellow-400': planet()?.big_warning === 'THUNDERSTORMS'}"
+          class="text-2xl md:text-2xl font-bold">{{ planet()?.big_warning }}</p>
         <p class="text-yellow-600 text-sm md:text-xl">{{ planet()?.small_warning }}</p>
       </div>
     </div>
