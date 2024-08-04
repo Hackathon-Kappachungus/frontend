@@ -50,6 +50,41 @@ export class LanguageService {
             },
           ],
         },
+        {
+          name: 'Navigation',
+          phrases: [
+            {
+              guid: 'whereisthespacestation',
+              phrase: 'Where is the space station?',
+              translation: '¿Dónde está la estación espacial?',
+              audioFileUrl: '/assets/language-sounds/mars/whereisthespacestation.mp3',
+            },
+            {
+              guid: 'imlost',
+              phrase: 'I\'m Lost',
+              translation: 'Estoy perdido',
+              audioFileUrl: '/assets/language-sounds/mars/imlost.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Shopping',
+          phrases: [
+            {
+              guid: 'howmuchdoesthiscost',
+              phrase: 'How much does this cost?',
+              translation: '¿Cuánto cuesta este?',
+              audioFileUrl: '/assets/language-sounds/mars/howmuchdoesthiscost.mp3',
+            },
+            {
+              guid: 'canipaybycreditcard',
+              phrase: 'Can I pay by credit card?',
+              translation: '¿Puedo pagar con tarjeta de crédito?',
+              audioFileUrl: '/assets/language-sounds/mars/canipaybycreditcard.mp3',
+            },
+          ],
+        },
+        
       ],
     },
     {
@@ -93,6 +128,40 @@ export class LanguageService {
               phrase: 'Do you speak English?',
               translation: 'Czy mówisz po angielsku?',
               audioFileUrl: '/assets/language-sounds/jupiter/doyouspeakenglish.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Navigation',
+          phrases: [
+            {
+              guid: 'whereisthespacestation',
+              phrase: 'Where is the space station?',
+              translation: 'Gdzie jest stacja kosmiczna?',
+              audioFileUrl: '/assets/language-sounds/jupiter/whereisthespacestation.mp3',
+            },
+            {
+              guid: 'imlost',
+              phrase: 'I\'m Lost',
+              translation: 'zgubiłem się',
+              audioFileUrl: '/assets/language-sounds/jupiter/imlost.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Shopping',
+          phrases: [
+            {
+              guid: 'howmuchdoesthiscost',
+              phrase: 'How much does this cost?',
+              translation: 'Ile to kosztuje?',
+              audioFileUrl: '/assets/language-sounds/jupiter/howmuchdoesthiscost.mp3',
+            },
+            {
+              guid: 'canipaybycreditcard',
+              phrase: 'Can I pay by credit card?',
+              translation: 'Czy mogę zapłacić kartą kredytową?',
+              audioFileUrl: '/assets/language-sounds/jupiter/canipaybycreditcard.mp3',
             },
           ],
         },
@@ -142,6 +211,40 @@ export class LanguageService {
             },
           ],
         },
+        {
+          name: 'Navigation',
+          phrases: [
+            {
+              guid: 'whereisthespacestation',
+              phrase: 'Where is the space station?',
+              translation: 'Kōngjiānzhàn zài nǎlǐ?',
+              audioFileUrl: '/assets/language-sounds/uranus/whereisthespacestation.mp3',
+            },
+            {
+              guid: 'imlost',
+              phrase: 'I\'m Lost',
+              translation: 'Wǒ mílùle',
+              audioFileUrl: '/assets/language-sounds/uranus/imlost.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Shopping',
+          phrases: [
+            {
+              guid: 'howmuchdoesthiscost',
+              phrase: 'How much does this cost?',
+              translation: 'Zhège duōshǎo qián?',
+              audioFileUrl: '/assets/language-sounds/uranus/howmuchdoesthiscost.mp3',
+            },
+            {
+              guid: 'canipaybycreditcard',
+              phrase: 'Can I pay by credit card?',
+              translation: 'Wǒ kěyǐ yòng xìnyòngkǎ fùkuǎn ma?',
+              audioFileUrl: '/assets/language-sounds/uranus/canipaybycreditcard.mp3',
+            },
+          ],
+        },
       ],
     },
     {
@@ -188,6 +291,40 @@ export class LanguageService {
             },
           ],
         },
+        {
+          name: 'Navigation',
+          phrases: [
+            {
+              guid: 'whereisthespacestation',
+              phrase: 'Where is the space station?',
+              translation: 'Où est la station spatiale ?',
+              audioFileUrl: '/assets/language-sounds/neptune/whereisthespacestation.mp3',
+            },
+            {
+              guid: 'imlost',
+              phrase: 'I\'m Lost',
+              translation: 'je suis perdu',
+              audioFileUrl: '/assets/language-sounds/neptune/imlost.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Shopping',
+          phrases: [
+            {
+              guid: 'howmuchdoesthiscost',
+              phrase: 'How much does this cost?',
+              translation: 'Combien ça coûte?',
+              audioFileUrl: '/assets/language-sounds/neptune/howmuchdoesthiscost.mp3',
+            },
+            {
+              guid: 'canipaybycreditcard',
+              phrase: 'Can I pay by credit card?',
+              translation: 'Puis-je payer par carte de crédit?',
+              audioFileUrl: '/assets/language-sounds/neptune/canipaybycreditcard.mp3',
+            },
+          ],
+        },
       ],
     },
     {
@@ -231,6 +368,40 @@ export class LanguageService {
               phrase: 'Do you speak English?',
               translation: 'Praat jy Engels?',
               audioFileUrl: '/assets/language-sounds/pluto/doyouspeakenglish.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Navigation',
+          phrases: [
+            {
+              guid: 'whereisthespacestation',
+              phrase: 'Where is the space station?',
+              translation: 'Waar is die ruimtestasie?',
+              audioFileUrl: '/assets/language-sounds/pluto/whereisthespacestation.mp3',
+            },
+            {
+              guid: 'imlost',
+              phrase: 'I\'m Lost',
+              translation: 'ek is verlore',
+              audioFileUrl: '/assets/language-sounds/pluto/imlost.mp3',
+            },
+          ],
+        },
+        {
+          name: 'Shopping',
+          phrases: [
+            {
+              guid: 'howmuchdoesthiscost',
+              phrase: 'How much does this cost?',
+              translation: 'Hoeveel kos dit?',
+              audioFileUrl: '/assets/language-sounds/pluto/howmuchdoesthiscost.mp3',
+            },
+            {
+              guid: 'canipaybycreditcard',
+              phrase: 'Can I pay by credit card?',
+              translation: 'Kan ek met kredietkaart betaal?',
+              audioFileUrl: '/assets/language-sounds/pluto/canipaybycreditcard.mp3',
             },
           ],
         },
