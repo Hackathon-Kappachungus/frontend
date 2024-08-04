@@ -1,1 +1,73 @@
-<p>reviews works!</p>
+<div class="p-10 flex flex-col min-h-[100svh] relative font-outfit" style="overflow: hidden;">
+
+  @if (planet(); as planet) {
+    <div>
+      <div class="uppercase font-semibold text-[65px]">
+        {{ planet.name }}
+      </div>
+    </div>
+  }
+
+  <!-- Grouped section start -->
+  <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <!-- Ratings and review -->
+    <div style="display: flex; flex-direction: column; align-items: flex-start; position: relative; left: 50px;">
+      <div style="font-size:100px; width:143px; height:177px; text-align: center;" class="test-gradient">4.8</div>
+      <div style="font-size:40px; width:143px; height:111px; text-align: center;">Overall Review</div>
+    </div>
+
+    <!-- Categories and bars -->
+    <div style="display: flex; flex-direction: column; justify-content: start; z-index:2; position: relative;position:absolute;top:350px;left:100px;">
+      <p style="font-size:25px;">Attractions</p>
+      <img src="assets/Rectangle 2.png" style="width:400px;height:18px;">
+      <img src="assets/Rectangle 3.png" style="width:22px;height:19px;position: absolute;top:37px;" class="bar bar-1">
+      <p style="font-size:25px;">Safety</p>
+      <img src="assets/Rectangle 2.png" style="width:400px;height:18px;">
+      <img src="assets/Rectangle 3.png" style="width:22px;height:20px;position: absolute;top:93px;" class="bar bar-2">
+      <p style="font-size:25px;">Affordability</p>
+      <img src="assets/Rectangle 2.png" style="width:400px;height:18px;">
+      <img src="assets/Rectangle 3.png" style="width:22px;height:20px;position: absolute;top:148px;" class="bar bar-3">
+      <p style="font-size:25px;">Transportation</p>
+      <img src="assets/Rectangle 2.png" style="width:400px;height:18px;">
+      <img src="assets/Rectangle 3.png" style="width:22px;height:20px;position: absolute;top:204px;" class="bar bar-4">
+    </div>
+
+    <div class="flex-1 z-10">
+      <router-outlet/>
+    </div>
+
+    <div class="flex flex-row justify-end gap-10 uppercase underline w-full z-0" style="position: relative;top:300px;">
+      <a [routerLinkActiveOptions]="{exact: true}" [routerLinkActive]="['hidden']"
+         [routerLink]="['/planet', planet()?.guid]">
+        
+      </a>
+      <a [routerLinkActive]="['hidden']" [routerLink]="['language']">
+        
+      </a>
+      <a [routerLinkActive]="['hidden']" [routerLink]="['reviews']">
+        
+      </a>
+      <a>
+        
+      </a>
+    </div>
+
+    <div style="display: flex; flex-direction: column; justify-content: start; height:500px; margin-top:-150px;width:1000px;" class="auto">
+      <img src="assets/user review.png" style="">
+      <img src="assets/user review.png" style="">
+      <img src="assets/user review.png" style="">
+      <img src="assets/user review.png" style="">
+      <img src="assets/user review.png" style="">
+      <img src="assets/user review.png" style="">
+    </div>
+
+    @if (planet(); as planet) {
+      <img [src]="planet.imageUrl" class="absolute right-[50%] top-[50%]" style="width:843px; left:-351px;"/>
+    }
+  </div>
+  <!-- Grouped section end -->
+</div>
+
+
+
+  

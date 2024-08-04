@@ -1,0 +1,88 @@
+.test-gradient {
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    background-image:linear-gradient(#F1F1F1 19%,#8B8B8B);
+}
+.container {
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+  }
+  .bar {
+    width: 0;
+    height: 100%;
+    background-color:#684E3C;
+    animation: extend 5s forwards;
+  }
+
+  .bar-1 {
+    animation: extend 5s forwards;
+  }
+
+  .bar-2 {
+    animation: extend-2 5s forwards;
+  }
+  .bar-3 {
+    animation: extend-3 5s forwards;
+  }
+  .bar-4 {
+    animation: extend-4 5s forwards;
+  }
+
+  
+  @keyframes extend {
+    from {
+      width: 0;
+    }
+    to {
+      width: 25%;
+    }
+  }
+
+  @keyframes extend-2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+
+  }
+  @keyframes extend-3 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 40%;
+    }
+
+  }
+  @keyframes extend-4 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 85%;
+    }
+
+  }
+  .auto {
+    overflow: auto;
+    height:9em;
+  }
+  .auto::-webkit-scrollbar {
+    width: 6px !important;
+    background-color: transparent !important;
+}
+.auto::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+}
+.auto::-webkit-scrollbar {
+    height: 5px;
+    width: 6px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+  

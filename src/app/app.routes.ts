@@ -10,6 +10,10 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'review/:planetGuid',
+    component: ReviewsComponent
+  },
+  {
     path: 'planet/:planetGuid',
     component: PlanetComponent,
     children: [
