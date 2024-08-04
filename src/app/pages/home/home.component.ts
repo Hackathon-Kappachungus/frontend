@@ -76,7 +76,13 @@ export class HomeComponent {
       (response: any) => {
         this.isLoading.set(false);
         if (response['predictions'].length > 0) {
-          this.router.navigate(['/planet', response['predictions'][0]['class'].toString().toLowerCase()]);
+          const planet = response['predictions'][0]['class'].toString().toLowerCase();
+
+          if (this.planetsService.planets().find(p => p.guid === planet)) {
+            void this.router.navigate(['/planet', response['predictions'][0]['class'].toString().toLowerCase()]);
+          } else {
+            alert('Could not detect any known planets in the image.');
+          }
         } else {
           alert('Could not detect any planets in the image.');
         }
