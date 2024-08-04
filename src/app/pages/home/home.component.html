@@ -5,12 +5,29 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-3 flex-1 items-center text-center">
+  <div class="grid grid-cols-2 md:grid-cols-3 flex-1 items-center text-center">
     @for (planet of planetsService.planets(); track planet.guid) {
-      <div [routerLink]="['/planet', planet.guid]" class="group cursor-pointer" appRandomMove>
-        <img [src]="planet.imageUrl" class="group-hover:scale-110 transition size-[200px] mx-auto object-contain">
-        <p class="opacity-0 group-hover:opacity-100 transition">{{ planet.name }}</p>
-      </div>
+      @if (!planet.hideFromHome) {
+        <div [routerLink]="['/planet', planet.guid]" class="group cursor-pointer" appRandomMove>
+          <img [src]="planet.imageUrl" class="group-hover:scale-110 transition size-[200px] mx-auto object-contain">
+          <p class="opacity-0 group-hover:opacity-100 transition">{{ planet.name }}</p>
+        </div>
+      }
     }
   </div>
+
+
 </div>
+
+<div (click)="image.click()" class="fixed bottom-10 right-10">
+  <img alt="Camera Icon" class="h-[90px] mx-auto" src="assets/camera.png">
+  <p>DETECT PLANET</p>
+  <input #image (change)="onFileSelected($event)" class="hidden" type="file"/>
+</div>
+
+@if (isLoading()) {
+
+  <div class="fixed h-full w-full bg-black top-0 left-0">
+    loading....
+  </div>
+}

@@ -162,6 +162,7 @@ export const planets: planet[] = [
       image: "assets/cloud.png",
       day: "Wed",
     }],
-    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269270374474846268/winter-2383930_1280.jpg?ex=66af73a7&is=66ae2227&hm=5d0d877f80e888dffe1a9c529040f086a91f7dbf661ffec76a1ff3305d7c544d&'
+    three60image: 'https://cdn.discordapp.com/attachments/563283988265959433/1269270374474846268/winter-2383930_1280.jpg?ex=66af73a7&is=66ae2227&hm=5d0d877f80e888dffe1a9c529040f086a91f7dbf661ffec76a1ff3305d7c544d&',
+    hideFromHome: false,
   }
 ]
