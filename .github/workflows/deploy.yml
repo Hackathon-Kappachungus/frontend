@@ -1,0 +1,27 @@
+name: Build and test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Prepare
+        run: |
+          npm install
+          npm install -g @angular/cli
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          ng deploy --repo=https://github.com/Hackathon-Kappachungus/frontend.git --name="JoshuaMorley" --email=jmor490@aucklanduni.ac.nz --base-href=/frontend/;
