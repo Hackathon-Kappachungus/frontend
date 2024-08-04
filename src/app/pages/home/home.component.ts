@@ -3,6 +3,8 @@ import {Router, RouterLink} from '@angular/router';
 import {RandomMoveDirective} from "../../directives/random-move.directive";
 import {PlanetsService} from "../../services/planets.service";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import { MatProgressBar, MatProgressBarModule } from '@angular/material/progress-bar';
+
 import pica from 'pica';
 
 @Component({
@@ -11,6 +13,7 @@ import pica from 'pica';
   imports: [
     RouterLink,
     RandomMoveDirective,
+    MatProgressBar
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
